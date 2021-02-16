@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="IcrusaI" id="changelog-0.0">
+        <createTable tableName="cities">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="false" unique="true"/>
+            </column>
+            <column name="latitude" type="DOUBLE">
+                <constraints nullable="false" primaryKey="false" unique="false"/>
+            </column>
+            <column name="longitude" type="DOUBLE">
+                <constraints nullable="false" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+
+        <createIndex tableName="cities" indexName="cities_id_index">
+            <column name="id" />
+        </createIndex>
+
+        <createTable tableName="distances">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="from_city" type="INT">
+                <constraints nullable="false" foreignKeyName="distances_cities_from_city_id_fk" references="cities(id)" primaryKey="false" unique="false"/>
+            </column>
+            <column name="to_city" type="INT">
+                <constraints nullable="false" foreignKeyName="distances_cities_to_city_id_fk" references="cities(id)" primaryKey="false" unique="false"/>
+            </column>
+            <column name="distance" type="DOUBLE">
+                <constraints nullable="false" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

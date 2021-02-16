@@ -1,0 +1,17 @@
+<root>
+    <distance>
+        <fromCity>Тольятти</fromCity>
+        <toCity>Ленинград</toCity>
+        <distance>17.2</distance>
+    </distance>
+    <distance>
+        <fromCity>Тольятти</fromCity>
+        <toCity>Москва</toCity>
+        <distance>11.2</distance>
+    </distance>
+    <distance>
+        <fromCity>Тольятти</fromCity>
+        <toCity>Пенза</toCity>
+        <distance>14.2</distance>
+    </distance>
+</root>

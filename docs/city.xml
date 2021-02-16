@@ -1,0 +1,17 @@
+<root>
+    <city>
+        <name>Саратов</name>
+        <latitude>17.2</latitude>
+        <longitude>17.2</longitude>
+    </city>
+    <city>
+        <name>Москва</name>
+        <latitude>113.2</latitude>
+        <longitude>17.2</longitude>
+    </city>
+    <city>
+        <name>Пенза</name>
+        <latitude>17.2</latitude>
+        <longitude>1127.2</longitude>
+    </city>
+</root>
